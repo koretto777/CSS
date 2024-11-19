@@ -1,0 +1,14 @@
+/* 
+La sintaxis se usa para definir estilos que se aplican a los elementos de una pagina web.
+
+Consta de 3 componentes principales:
+selector {
+propiedad:valor; //Punto y coma después de cada propiedad
+propiedad:valor; //se puede omitir en la última propiedad
+} 
+*/
+h1 {
+  color:orange;
+  font-size:120px;
+  font-family:sans-serif;
+}
