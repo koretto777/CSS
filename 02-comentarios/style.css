@@ -1,0 +1,10 @@
+/* Aquí va el comentario */
+/*
+-> Alt+shift+a
+Comando para crear un comentario
+Multiples líneas comentadas
+*/
+
+body {
+  background-color:red /* Se define el color del fondo */
+}
