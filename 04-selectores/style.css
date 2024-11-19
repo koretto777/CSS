@@ -1,0 +1,53 @@
+/* 
+
+Selectores
+patrones que permiten seleccionar y aplicar estilos específicos a elementos de una página web.
+
+Tipos de selectores:
+1.Básicos:
+-universal
+-de tipo
+
+2.Clase
+
+3.ID
+
+4.Combinados
+-descendientes
+-hijo directo
+-elemento adyacente
+-hermano general
+
+5.Atributos
+-atributo
+-atributo-valor
+
+6.Avanzados
+-pseudo-clase
+-pseudo-elementos
+
+*/
+/* 
+Selectores básicos
+*/
+/* 
+Universal -> Selecciona todos los elementos de un documento.
+*/
+*{
+  border: 2px solid red;
+  /* Reset Básico */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Selectores de tipo -> Seleccionan un tipo de eleemnto en html */
+
+body {
+  background-color:lightcyan
+}
+h1 {
+  color:darkblue
+}
+p {
+  font-size: 24px;
+}
