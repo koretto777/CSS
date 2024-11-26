@@ -5,24 +5,24 @@ patrones que permiten seleccionar y aplicar estilos específicos a elementos de 
 
 Tipos de selectores:
 1.Básicos:
--universal
--de tipo
+  -universal
+  -de tipo
 
 2.Clase
-seleccionan los elementos que tienen una clase específica.
-Se usa la notación de punto (.) antes del nombre de la clase.
+  seleccionan los elementos que tienen una clase específica.
+  Se usa la notación de punto (.) antes del nombre de la clase.
 
-.nombreClase {
-  propiedad:valor;
-}
+  .nombreClase {
+   propiedad:valor;
+  }
 
 3.ID
-Seleccionan un elemento único con un identioficador específico.
-Se uda la notacón de numeral antes del nombre del id.
+  Seleccionan un elemento único con un identioficador específico.
+  Se uda la notacón de numeral antes del nombre del id.
 
-#nombreId{
-propiedad:valor;
-}
+  #nombreId{
+  propiedad:valor;
+  }
 
 4.Combinados
 -Descendientes
@@ -33,16 +33,55 @@ propiedad:valor;
 }
 
 -Hijo directo
+  selecciona elementos que son hijos directos de un padre.
+
+  elemento p > elemento hijo {
+  propiedad:valor;
+  }
+
 -Elemento adyacente
+  selecciona el primer elemento inmediatamente después de otro, es decir, el hermano inmediato. (siblings)
+
+  elemento+elemento adyacente{
+  propiedad:valor;
+  }
+
 -Hermano general
+  selecciona todos los elementos hermanos después de un elemento.
+
+  elemento ~ elemento hermanos {
+  propiedad:valor;
+  }
 
 5.Atributos
--atributo
--atributo-valor
 
+  -atributo
+    selecciona elementos según el atributo que indiquemos sin importar su valor.
+
+    elelemnto[atributo] {
+    propiedad:valor;
+    }
+
+  -atributo-valor
+    selecciona el elemento segun el atributo y el valor que indiquemos.
+
+    elelemnto[atributo=valor] {
+    propiedad:valor;
+    }
 6.Avanzados
--pseudo-clase
--pseudo-elementos
+  -pseudo-clase
+    seleccionamos un elemento en un estado en particular
+
+    elemento;pseudoclase {
+    propiedad:valor;
+    }
+
+  -pseudo-elementos
+    selecciona partes específicas de un elemento html
+
+    elemento::pseudoelemento {
+    propiedad:valor;
+    }
 
 */
 /* 
@@ -111,4 +150,73 @@ aside section{
   text-align: right;
   padding: 24px;
   background-color: crimson;
+}
+
+/* combinados - hijos directos */
+
+ul > li {
+  background-color: lightblue;
+}
+
+.lista >li {
+  font-size: 12px;
+  color: darkred;
+}
+
+/* combinado - elemento adyasente*/
+
+h3 + ul {
+  list-style: none;
+}
+
+.bro + li {
+  background-color: yellow;
+}
+
+/* combinados - hermanos elemento general */
+
+.bro +li ~ li {
+background-color: orangered;
+}
+
+.tercero ~ li {
+  color: black;
+  font-size: 40px;
+}
+
+/* atributo */
+
+a[href] {
+  display: block;
+  text-decoration: none;
+  color: magenta;
+}
+
+/* atributo con valor */
+
+a[href="https://www.instagram.com"] {
+  font-size: 48px;
+  color: orange;
+}
+
+/* pseudo-clases */
+
+a:hover {
+  background-color: purple;
+  color: white;
+  text-decoration: underline;
+}
+
+a:focus {
+  border: 3px solid red;  
+}
+
+/* pseudo-elementos */
+
+a::after {
+  content: "🔥";
+}
+
+a::before {
+  content: "Este es un enlace hacia:";
 }
