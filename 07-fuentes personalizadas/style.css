@@ -1,0 +1,105 @@
+/* 
+Fuentes personailizadas 
+- Extrernas
+    Lamamaos desde servidores remotos.
+
+Google fonts
+    es un servicio o catalogo de fuentes que podemos usar de forma gratuita en internet.
+
+    -optimizadas para digital
+    -gratuitas
+    -curadas y de alta calidad
+    -código de vinculación para web
+
+https://fonts.google.com/
+
+1. Seleccionar la fuentes y traemos el codigo de incrustación o embed code al html, lo pegamos dentro de las etiquetas.
+2. Definimos lad reglas CSS para los elementos a los que se los queremos aplicar. Usamos las propiedades de font-family, font.weight, fornt-style, para las tipografías estáticas.
+*/
+
+h1 {
+    font-family: "Poppins" , sans-serif;
+    font-weight: 700; /* Grosor o peso */
+    font-style: italic /* Elige si es italica o cursiva */
+}
+
+p {
+    font-family: "Poppins" , sans-serif;
+    font-weight: 400;
+}
+
+/* Tipografias variables 
+
+.title {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 876;
+    font-style: italic;
+}
+
+.title:hover {
+    font-weight: 182;
+    transition: font-weight 1s ease;
+}
+
+.text {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 456;
+    font-style: normal;
+}
+
+*/
+
+/* 
+#Title {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic; 
+}
+
+#Text {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200
+    font-style: normal;
+}
+*/
+
+
+
+//*
+-Internas
+    Lamamos desde nuestros propios servidores o carpeta de recursos.
+    1. tenemos los archivos en una carpeta
+    2. formatos .ttf -otf .woff .woff2 etc..
+    3. declaramos en css @font-face
+
+        @font-face {
+            font-family: nombreFuente;  // 2 palabras entre " "
+            src: url(ubicacion), format(formato; // ubicación y formato entre " "
+        } 
+    4. creamos la regla css
+        selector {
+            font-family: nombreFuente , respaldo;
+        }
+*/
+
+@font-face {
+    font-family: "University";
+    src: url("./fuentes/University.otf"), format(".otf");
+}
+
+@font-face {
+    font-family: "CaviarDreams";
+    src: url("./fuentes/CaviarDreams.ttf"), format(".ttf");
+}
+
+#Title {
+    font-family: "University" , sans-serif;
+}
+
+#Text {
+    font-family: "CaviarDreams" , sans-serif;
+}
