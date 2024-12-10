@@ -1,0 +1,63 @@
+body {
+    background-color: pink;
+    color: whitesmoke;/* hereda */
+    font-family: "poppins", sans-serif; /* hereda */
+    height: 1000px;
+    height: 100%;
+    height: 100vh;
+}
+
+/* 
+
+Bloque y línea
+
+-Los elementos de bloque miden todo el ancho disponible de su contenedor.
+
+-Los elementos de bloque miden el alto de su contenido.
+
+-Los bloques de linea miden el ancho de su contenido.
+
+-Los elementos de linea miden su alto de contenido, considerando un espacio entre lineas.
+
+
+Widht (ancho) y heigth (alto)
+
+Se usan para establecer el ancho y alto en una página web. 
+Estas propiedades permiten definir el tamaño de los elementos, como cajas, imagenes o contenedores de manera explicita.
+
+Width establece el ancho de un elemento y podemos especificar su dimención horizontal con unidad de px, rem, em, cm, m, %
+
+Heigth establece la altura de un elemento y de igual manera podemos especificar su dimencion con las unidades: rem, em, %, px, auto.
+
+    *Si no se especifica la altura a un elemento de bloque, el elemneto ajustará su altura al contenido.
+    *Si usamos valores de unidades absolutas, necesitamos la adaptabilidad de los elementos. Es recomendable usar unidades relativas como % o vw (viewport wight)/ vh (viewport heigth)
+
+Para los elementos de linea el width y el heigth no funcionan. Por default se ajustarán a su contendio.
+
+Si queremos que un elemento de línea responda a un ancho y alto emplicito, necesitamos cambiar su comportamiento de visualizacion a traves de las propiedades de display.
+
+Para esto la propiedad de display puee recibir los valores de inline-block o block.
+
+*/
+
+.bloque {
+    width: 100px; /* absoluta */
+    width: 50%; /* relativa */
+    width: auto; /* default */
+
+    height: 100px;
+    height: auto;
+    height: 50%;
+
+    background-color: violet;
+}
+
+.linea {
+    display: block;
+    display: inline-block;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: orange;
+}
